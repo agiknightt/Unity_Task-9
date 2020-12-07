@@ -11,15 +11,15 @@ public class HealthBar : MonoBehaviour
 
     public void TakeDamage()
     {
-        ControlSlider(-10);
+        UpdateSliderValue(-10);
     }    
 
     public void TakeHeal()
     {
-        ControlSlider(10);
+        UpdateSliderValue(10);
     }
 
-    private void ControlSlider(int stepValue)
+    private void UpdateSliderValue(int stepValue)
     {
         _slider.DOValue(_slider.value + stepValue, 4);
     }
